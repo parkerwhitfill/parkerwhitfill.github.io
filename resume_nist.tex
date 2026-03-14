@@ -1,0 +1,175 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontenc}
+\usepackage{lmodern}
+
+% Colors
+\definecolor{linkblue}{HTML}{1a0dab}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkblue,
+    urlcolor=linkblue,
+    pdfauthor={Parker Whitfill},
+    pdftitle={Parker Whitfill - Resume}
+}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\scshape}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{14pt}{6pt}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Compact lists
+\setlist[itemize]{nosep, left=0pt, itemsep=2pt, topsep=2pt}
+
+\begin{document}
+
+% ===== Header =====
+\begin{center}
+    {\LARGE \textbf{Parker Whitfill}} \\[6pt]
+    Massachusetts Institute of Technology, Department of Economics \\
+    50 Memorial Dr, Cambridge, MA 02142 \\[2pt]
+    \href{mailto:parkerwhitfill@gmail.com}{parkerwhitfill@gmail.com}
+    \quad $\vert$ \quad
+    \href{mailto:whitfill@mit.edu}{whitfill@mit.edu}
+    \quad $\vert$ \quad
+    \href{https://github.com/parkerwhitfill}{github.com/parkerwhitfill}
+    \quad $\vert$ \quad
+    U.S.\ Citizen
+\end{center}
+
+% ===== Summary =====
+\section{Summary}
+Economics PhD researcher with deep expertise in AI/ML systems, benchmarking, and computational methods.
+Published in \textit{Nature} on large-scale AI evaluation.
+Research collaborator with Epoch AI and METR on AI forecasting, compute economics, and algorithmic progress.
+Experienced in building ML pipelines for OCR, developing AI benchmarks, and full-stack software development.
+Proficient in Python, R, and modern ML frameworks.
+
+% ===== Education =====
+\section{Education}
+
+\textbf{Ph.D.\ in Economics} \hfill 2023 -- Present \\
+Massachusetts Institute of Technology \hfill Cambridge, MA
+\begin{itemize}
+    \item Research focus: AI capabilities evaluation, benchmark design, compute economics, algorithmic progress
+    \item Coursework in machine learning, econometrics, causal inference, and computational methods
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{B.A.\ in Economics} \hfill 2017 -- 2021 \\
+University of Chicago \hfill Chicago, IL
+
+% ===== Experience =====
+\section{Research \& Professional Experience}
+
+\textbf{Future of Life Institute Fellow -- Software Engineer} \hfill 2025 \\
+Future of Life Institute \hfill Cambridge, MA
+\begin{itemize}
+    \item Designed and built a cooperative technology platform enabling users to coordinate messaging and collective action, from architecture through deployment
+    \item Developed full-stack application using Python and JavaScript, integrating APIs for real-time communication and user coordination workflows
+    \item Implemented backend services, database schema design, and frontend interfaces over a 3-month intensive fellowship focused on AI governance and safety tooling
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Research Assistant} \hfill 2021 -- 2023 \\
+University of Chicago \hfill Chicago, IL
+\begin{itemize}
+    \item Designed and implemented machine learning pipelines for optical character recognition (OCR) of historical documents, automating extraction of structured data from large archival corpora
+    \item Built text preprocessing, image segmentation, and classification models using Python (PyTorch, OpenCV, Tesseract) to digitize and parse historical economic records
+    \item Developed data ingestion and cleaning workflows for large-scale historical datasets, enabling quantitative analysis of inequality and institutional change
+    \item Conducted empirical research on economic history, contributing to a publication on the causal effects of WWII on inequality and the social contract in Britain
+    \item Managed end-to-end research pipelines: data collection, feature engineering, statistical modeling, and visualization
+\end{itemize}
+
+% ===== Publications =====
+\section{Publications \& Research}
+
+\textbf{A benchmark of expert-level academic questions to assess AI capabilities} \\
+Coauthor; consortium paper with $>$1{,}000 authors \\
+\textit{Nature}, 649:1139--1146, 2026. \href{https://www.nature.com/articles/s41586-025-09962-4}{doi:10.1038/s41586-025-09962-4}
+\begin{itemize}
+    \item Co-developed Humanity's Last Exam (HLE), a 3{,}000-question multi-modal benchmark evaluating frontier AI systems across dozens of academic disciplines
+    \item Contributed to benchmark design, question curation, and evaluation methodology for assessing AI capabilities at expert level
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Do Benchmarks Overstate AI Capabilities? Evidence from SWE-Bench Verified} \\
+Parker Whitfill, Cheryl Wu, Nate Rush, Joel Becker \hfill \textit{Working Paper}
+\begin{itemize}
+    \item Investigating measurement validity of widely-used software engineering AI benchmarks
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Will Compute Bottlenecks Prevent an Intelligence Explosion?} \\
+Parker Whitfill and Cheryl Wu. \href{https://arxiv.org/abs/2507.23181}{arXiv:2507.23181}
+\begin{itemize}
+    \item Modeled compute supply-demand dynamics for AI scaling; estimated substitutability between compute and algorithmic efficiency
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{The Software Intelligence Explosion Debate Needs Experiments} \\
+Anson Ho (Epoch AI), Parker Whitfill. \href{https://epoch.ai/gradient-updates/the-software-intelligence-explosion-debate-needs-experiments}{Epoch AI}
+\begin{itemize}
+    \item Collaboration with Epoch AI analyzing feasibility of recursive AI self-improvement; proposed experimental frameworks for measuring AI R\&D productivity
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Forecasting AI Time Horizon Under Compute Slowdowns} \\
+Parker Whitfill, Ben Snodin, Joel Becker (METR). \href{https://arxiv.org/abs/2511.19492}{arXiv:2511.19492}
+\begin{itemize}
+    \item Collaboration with METR; built quantitative forecasting models for AI development timelines under hardware constraint scenarios
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{Note on Selection Bias in Observational Estimates of Algorithmic Progress} \\
+Parker Whitfill. \href{https://arxiv.org/abs/2508.11033}{arXiv:2508.11033}
+
+\vspace{4pt}
+
+\textbf{Beyond Ordinal Preferences: Why Alignment Needs Cardinal Human Feedback} \\
+Parker Whitfill and Stewart Slocum. \href{https://arxiv.org/abs/2508.08486}{arXiv:2508.08486}
+\begin{itemize}
+    \item Analyzed limitations of RLHF preference models; proposed cardinal feedback mechanisms for AI alignment
+\end{itemize}
+
+\vspace{4pt}
+
+\textbf{The Second World War, Inequality and the Social Contract in England} \\
+Leander Heldring, James Robinson, Parker Whitfill (equal contribution) \\
+\textit{Economica}, Volume 89, Issue S1, Pages S137--S159
+
+% ===== Technical Skills =====
+\section{Technical Skills}
+
+\textbf{Languages:} Python, R, SQL, \LaTeX, Bash, JavaScript/HTML/CSS \\
+\textbf{ML/AI:} PyTorch, scikit-learn, OpenCV, Tesseract OCR, Hugging Face Transformers, LLM evaluation \\
+\textbf{Data \& Compute:} Pandas, NumPy, Stata, large-scale data processing, statistical modeling \\
+\textbf{Tools:} Git, Linux/Unix, cloud computing, Jupyter, VS Code \\
+\textbf{Methods:} Machine learning, deep learning, computer vision (OCR), NLP, causal inference, econometrics, benchmark design \& evaluation, time-series forecasting
+
+% ===== Honors =====
+\section{Honors \& Fellowships}
+\begin{itemize}
+    \item Emergent Ventures Grantee (2025)
+    \item Stripe Economics of AI Fellowship (2025)
+    \item Future of Life Institute Fellowship (2025)
+    \item 2017 National Debate Champion (TOC LD)
+\end{itemize}
+
+\end{document}
