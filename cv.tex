@@ -1,0 +1,192 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTE: If you find that it says                                     %%
+%%                                                                    %%
+%%                           1 of ??                                  %%
+%%                                                                    %%
+%% at the bottom of your first page, this means that the AUX file     %%
+%% was not available when you ran LaTeX on this source. Simply RERUN  %%
+%% LaTeX to get the ``??'' replaced with the number of the last page  %%
+%% of the document. The AUX file will be generated on the first run   %%
+%% of LaTeX and used on the second run to fill in all of the          %%
+%% references.                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt]{article}
+
+\usepackage{calc}
+\usepackage{pifont}
+\usepackage{marvosym}
+
+% Simpler bibsection for CV sections
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newenvironment{bibsection}%
+        {\vspace{-\baselineskip}\begin{list}{}{%
+       \setlength{\leftmargin}{\bibhang}%
+       \setlength{\itemindent}{-\leftmargin}%
+       \setlength{\itemsep}{\bibsep}%
+       \setlength{\parsep}{\z@}%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+\makeatother
+
+\reversemarginpar
+
+% A4-sized paper
+\usepackage[paper=a4paper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=24mm,    % Length of section titles
+            marginparsep=1mm,       % Space between titles and text
+            margin=15mm,            % 25mm margins
+            includemp]{geometry}
+
+\setlength{\parindent}{0in}
+
+\usepackage{paralist}
+\usepackage[shortlabels]{enumitem}
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.1\textwidth+0.1\marginparsep+0.1\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{3.5in}{\, \hfill %
+                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\makeheading}[1]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+                {\large \bfseries #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+\renewcommand{\section}[2]%
+        {\pagebreak[2]\vspace{1\baselineskip}%
+         \phantomsection\addcontentsline{toc}{section}{#1}%
+         \hspace{0in}%
+         \marginpar{
+         \raggedright \scshape #1}#2}
+
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1]}{\end{itemize}%
+         \vspace{-0.6\baselineskip}}
+
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\vspace{-\baselineskip}\begin{list}{#1}{%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+
+\newenvironment{innerlist}[1][\enskip$\circ$]%
+        {\begin{compactitem}[#1]}{\end{compactitem}}
+
+\newenvironment{loneinnerlist}[1][\enskip\textbullet]%
+        {\vspace{-\baselineskip}\begin{compactitem}[#1]}
+        {\end{compactitem}\vspace{-.6\baselineskip}}
+
+\newcommand{\blankline}{\quad\pagebreak[2]}
+\newcommand{\halfblankline}{\vspace{0.5\baselineskip}}
+
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\vs{\vspace{-0.1in}}
+\begin{document}
+
+\makeheading{Parker Whitfill \hfill {\small Last update: March 15, 2026}}
+
+\section{Contact Information}
+
+\newlength{\rcollength}\setlength{\rcollength}{3 in}
+\vs
+\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
+Massachusetts Institute of Technology & \hfill{\large\Letter} \texttt{E-mail:}\href{mailto:parkerwhitfill@gmail.com}{parkerwhitfill@gmail.com}\\
+Department of Economics \\
+50 Memorial Dr, Cambridge, MA 02142
+\end{tabular}
+
+\vspace{0.20in}
+
+\section{Education}
+Ph.D. in Economics, Massachusetts Institute of Technology \hfill 2023- \\
+
+B.A. in Economics, University of Chicago
+\hfill 2017--2021 \\ 
+\vspace{0.1in}
+\label{sec:research_backg}
+
+\section{Publications}
+\textbf{A benchmark of expert-level academic questions to assess AI capabilities} \\
+\small{Coauthor; consortium paper with $>$1{,}000 authors} \\
+\newblock \emph{Nature}, 649:1139--1146, 2026. doi:10.1038/s41586-025-09962-4. \\
+\url{https://www.nature.com/articles/s41586-025-09962-4} \\
+
+\textbf{The Second World War, Inequality and the Social Contract in England} \\
+\small Leander Heldring*, James Robinson*, \textbf{Parker Whitfill}* \\ 
+\textit{Economica}, Volume 89, Issue S1, Supplement: Centenary Issue: 1921 – 2021, Pages S137-S159
+
+\small{* Equal contribution}
+
+\section{Unpublished Research}
+
+\textbf{Many SWE-bench-Passing PRs Would Not Be Merged into Main} \\
+\small{\textbf{Parker Whitfill}, Cheryl Wu, Nate Rush, Joel Becker} \\
+\url{https://metr.org/notes/2026-03-10-many-swe-bench-passing-prs-would-not-be-merged-into-main/} \\
+
+\textbf{Forecasting AI Time Horizon Under Compute Slowdowns} \\
+\small{\textbf{Parker Whitfill}, Ben Snodin and Joel Becker} \\
+\url{https://arxiv.org/abs/2511.19492} \\
+
+\textbf{Will Compute Bottlenecks Prevent an Intelligence Explosion?} \\
+\small{\textbf{Parker Whitfill} and Cheryl Wu} \\
+Full Paper: \url{https://arxiv.org/abs/2507.23181} \\
+Forum Post: \url{https://tinyurl.com/48e3rt3n} \\
+
+\textbf{Note on Selection Bias in Observational Estimates of Algorithmic Progress}, \\
+\small{Parker Whitfill} \\
+\url{https://arxiv.org/abs/2508.11033} \\
+
+\textbf{Beyond Ordinal Preferences: Why Alignment Needs Cardinal Human Feedback}, \\
+\small{Parker Whitfill and Stewart Slocum} \\
+\url{https://arxiv.org/abs/2508.08486} \\
+
+\section{Honors}
+Emergent Ventures Grantee (2025), 
+Stripe Econ of AI Fellowship (2025), 
+Future of Life Fellowship (2025), 
+
+\section{Citizenship}
+United States
+
+\section{Other}
+Giving What We Can Pledge, 2017 \ \ National Debate Champion (TOC LD)
+
+\section{Other Affiliations}
+METR (Research Collaborator)
+
+\end{document}
