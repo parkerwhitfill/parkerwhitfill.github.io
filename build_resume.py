@@ -245,7 +245,7 @@ add_paper_detail('Parker Whitfill, Ben Snodin, Joel Becker (METR) \u2014 arXiv:2
 add_bullet('Collaboration with METR; built quantitative forecasting models for AI development timelines under hardware constraint scenarios')
 
 add_paper_title('Will Compute Bottlenecks Prevent an Intelligence Explosion?')
-add_paper_detail('Parker Whitfill and Cheryl Wu \u2014 arXiv:2507.23181')
+add_paper_detail('Parker Whitfill* and Cheryl Wu* \u2014 arXiv:2507.23181 (*equal contribution)')
 add_bullet('Modeled compute supply-demand dynamics for AI scaling; estimated substitutability between compute and algorithmic efficiency')
 
 add_paper_title('Note on Selection Bias in Observational Estimates of Algorithmic Progress')
